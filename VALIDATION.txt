@@ -1,0 +1,19 @@
+Local validation: 3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]
+Windows amd64
+
+test_add_remove_change_schema (test_reconcile.ReconcileTests.test_add_remove_change_schema) ... ok
+test_bad_headers_width_empty_keys (test_reconcile.ReconcileTests.test_bad_headers_width_empty_keys) ... ok
+test_cli_status (test_reconcile.ReconcileTests.test_cli_status) ... ok
+test_decimal_tolerance (test_reconcile.ReconcileTests.test_decimal_tolerance) ... ok
+test_duplicate_fails (test_reconcile.ReconcileTests.test_duplicate_fails) ... ok
+test_ignore (test_reconcile.ReconcileTests.test_ignore) ... ok
+test_invalid_options (test_reconcile.ReconcileTests.test_invalid_options) ... ok
+test_multiline_unicode (test_reconcile.ReconcileTests.test_multiline_unicode) ... ok
+test_reorder_and_composite_keys (test_reconcile.ReconcileTests.test_reorder_and_composite_keys) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.021s
+
+OK
+
+Other CI operating systems and versions have not yet run.
