@@ -32,6 +32,8 @@ def close_enough(left, right, tolerance):
         a, b = Decimal(left), Decimal(right)
         if not a.is_finite() or not b.is_finite():
             return False
+        if any(abs(n.as_tuple().exponent) > 10000 or abs(n.adjusted()) > 10000 for n in (a, b)):
+            raise ValueError('numeric exponent exceeds supported 10000-digit range')
         # Precision includes alignment between exponents, avoiding binary-float rounding.
         precision = max(len(a.as_tuple().digits), len(b.as_tuple().digits)) + abs(a.as_tuple().exponent - b.as_tuple().exponent) + 2
         if precision > 10000:

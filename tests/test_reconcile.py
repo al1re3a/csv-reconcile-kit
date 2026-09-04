@@ -56,3 +56,7 @@ class ReconcileTests(unittest.TestCase):
             self.assertEqual(main([str(self.a), str(self.b), '--key', 'id']), 1)
         with contextlib.redirect_stderr(io.StringIO()):
             self.assertEqual(main([str(self.a), str(self.b), '--key', 'id', '--tolerance', 'v=NaN']), 2)
+
+    def test_extreme_exponent_is_controlled_error(self):
+        with self.assertRaisesRegex(ValueError, 'exponent'):
+            close_enough('1e1000000', '2e1000000', Decimal('1'))
