@@ -1,0 +1,6 @@
+include README.md LICENSE CHANGELOG.md CONTRIBUTING.md LAUNCH.md VALIDATION.txt
+recursive-include examples *
+recursive-include tests *.py
+recursive-include .github *.yml *.md
+
+include RELEASING.md
